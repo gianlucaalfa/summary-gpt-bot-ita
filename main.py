@@ -74,6 +74,7 @@ def summarize(text_array):
         system_messages = [
             {"role": "system", "content": "You are an expert in creating summaries that capture the main points and key details."},
             {"role": "system", "content": f"You will show the bulleted list content without translate any technical terms."},
+            {"role": "system", "content": f"Avoid talking about the sponsor of the video or the sponsor of the youtube channel. Avoid talking about advertisement and sponsors."},
             {"role": "system", "content": f"You will print all the content in {lang}."},
         ]
         with ThreadPoolExecutor() as executor:
